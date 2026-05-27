@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devolução ou Troca - Lojas Eluz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="brand-hero" aria-label="Lojas Eluz Móveis">
+      <img src="logo-eluz-3d.png" alt="Lojas Eluz Móveis">
+    </div>
+
+    <form class="form" id="returnForm">
+      <section class="header card">
+        <h1>Devolução ou Troca</h1>
+        <p>Esse Formulário deve ser corretamente preenchido.</p>
+        <div class="notice">
+          <strong>i</strong>
+          <span>
+            <P>Importante:</P>
+            <P>1.	Trocas de 7 dias devem ser solicitadas somente após a confirmação e autorização da Assistência.</P>
+            <P>2.	Devoluções ou trocas de venda com entrega só serão feitas após o envio de todas as informações descritas abaixo.</P>
+            <P>3.	Somente o Gerente pode enviar solicitações de devolução ou troca para a Supervisão.</P>
+            <P>4.	REFAZER A VENDA NA OPERAÇÃO Venda Rápida - Devolvida E Venda com Entrega - Devolvida SE FOR UMA VENDA COM ENTREGA QUE JÁ FOI ENTREGUE.</P>
+            <P>5.	OBRIGATÓRIO TROCAR O CARNÊ DO CLIENTE EM CASO DE VENDA NO CREDIÁRIO.</P>
+          </span>
+        </div>
+        <p class="required-note">* Indica uma pergunta obrigatória</p>
+      </section>
+
+      <section class="question card">
+        <label for="reason">Motivo da Devolução? <span>*</span></label>
+        <input id="reason" name="reason" type="text" placeholder="Sua resposta" required>
+      </section>
+
+      <section class="question card">
+        <label for="branch">Filial solicitante? <span>*</span></label>
+        <input id="branch" name="branch" type="text" placeholder="Sua resposta" required>
+      </section>
+
+      <section class="question card">
+        <fieldset>
+          <legend>Produto foi entregue? <span>*</span></legend>
+          <label class="radio-option">
+            <input type="radio" name="delivered" value="Sim" required>
+            <span>Sim</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="delivered" value="Não">
+            <span>Não</span>
+          </label>
+        </fieldset>
+      </section>
+
+      <section class="question card">
+        <label for="location">Onde o produto está? <span>*</span></label>
+        <input id="location" name="location" type="text" placeholder="Sua resposta" required>
+      </section>
+
+      <section class="question card">
+        <label for="destination">Para onde o produto vai após a Devolução? <span>*</span></label>
+        <input id="destination" name="destination" type="text" placeholder="Sua resposta" required>
+      </section>
+
+      <section class="question card">
+        <label for="saleSummary">Anexar o Resumo da venda em PDF. <span>*</span></label>
+        <p class="hint">Faça upload de 1 arquivo aceito: PDF. O tamanho máximo é de 10 MB.</p>
+        <label class="upload-button" for="saleSummary">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Z"></path>
+            <path d="M5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"></path>
+          </svg>
+          Adicionar arquivo
+        </label>
+        <input id="saleSummary" name="saleSummary" type="file" accept="application/pdf,.pdf" required>
+        <p class="file-name" id="fileName">Nenhum arquivo escolhido</p>
+      </section>
+
+      <section class="actions card">
+        <div class="button-group">
+          <button id="submitButton" type="submit">Enviar</button>
+          <button class="secondary" type="reset">Limpar</button>
+        </div>
+        <div class="security-note">
+          <span>✓</span>
+        </div>
+      </section>
+
+      <p class="success" id="successMessage" role="status"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+  <footer><p>© 2026 Daniel Soares | Automações</p></footer>
+</body>
+</html>
