@@ -36,6 +36,11 @@
       </section>
 
       <section class="question card">
+        <label for="seller">Nome do Vendedor? <span>*</span></label>
+        <input id="seller" name="seller" type="text" placeholder="Sua resposta" required>
+      </section>
+
+      <section class="question card">
         <label for="branch">Filial solicitante? <span>*</span></label>
         <input id="branch" name="branch" type="text" placeholder="Sua resposta" required>
       </section>
@@ -51,6 +56,23 @@
             <input type="radio" name="delivered" value="Não">
             <span>Não</span>
           </label>
+        </fieldset>
+      </section>
+
+      <section class="question card">
+        <fieldset>
+          <legend>Qual a operação da venda? <span>*</span></legend>
+          <label class="radio-option"><input type="radio" name="operation" value="Venda Rápida" required><span>Venda Rápida</span></label>
+          <label class="radio-option"><input type="radio" name="operation" value="Venda com Entrega"><span>Venda com Entrega</span></label>
+          <label class="radio-option"><input type="radio" name="operation" value="Venda sob encomenda"><span>Venda sob encomenda</span></label>
+        </fieldset>
+      </section>
+
+      <section class="question card">
+        <fieldset>
+          <legend>Cancelamento ou Troca? <span>*</span></legend>
+          <label class="radio-option"><input type="radio" name="cancellation" value="Cancelamento" required><span>Cancelamento</span></label>
+          <label class="radio-option"><input type="radio" name="cancellation" value="Troca ou ajuste na venda"><span>Troca ou ajuste na venda</span></label>
         </fieldset>
       </section>
 
@@ -88,7 +110,7 @@
         </div>
       </section>
 
-      <p class="success" id="successMessage" role="status"></p>
+      <p class="success" id="successMessage" role="status" aria-live="polite"></p>
     </form>
   </main>
 
